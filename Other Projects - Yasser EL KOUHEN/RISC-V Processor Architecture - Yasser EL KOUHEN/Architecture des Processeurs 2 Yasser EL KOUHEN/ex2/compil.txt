@@ -1,0 +1,6 @@
+clear
+cd firmware
+./build.sh
+cd ../sim
+./build.sh
+cd ..

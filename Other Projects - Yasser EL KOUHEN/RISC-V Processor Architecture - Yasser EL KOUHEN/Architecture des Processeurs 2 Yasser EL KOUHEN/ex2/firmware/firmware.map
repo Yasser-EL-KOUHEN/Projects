@@ -1,0 +1,80 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+imem             0x00000000         0x00001000
+rom              0x00010000         0x00001000
+ram              0x00010800         0x00000800
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000100                        stack_size = 0x100
+                0x00000100                        heap_size = 0x100
+
+.text           0x00000000       0x44
+                0x00000000                        __text_start = .
+ *(.start)
+ .start         0x00000000       0x44 mult.o
+                0x00000004                start
+ *(.text)
+ .text          0x00000044        0x0 mult.o
+ *(.text.*)
+
+.rodata         0x00010000        0x0
+ *(.rodata)
+ *(.rodata.*)
+ *(.srodata)
+ *(.srodata.*)
+                0x00010000                        . = ALIGN (0x4)
+                0x00010000                        __text_end = .
+
+.data           0x00010800        0x0 load address 0x00010000
+                0x00010800                        . = ALIGN (0x4)
+                0x00010800                        __data_start = .
+ *(.data)
+ .data          0x00010800        0x0 mult.o
+ *(.data.*)
+ *(.sdata)
+ *(.sdata.*)
+                0x00010800                        . = ALIGN (0x4)
+                0x00010800                        __data_end = .
+
+.init
+ *(SORT_NONE(.init))
+
+.bss            0x00010800        0x0 load address 0x00010000
+                0x00010800                        . = ALIGN (0x4)
+                0x00010800                        __bss_start = .
+                0x00010800                        _gp = .
+ *(.bss)
+ .bss           0x00010800        0x0 mult.o
+ *(.bss.*)
+ *(.sbss)
+ *(.sbss.*)
+                0x00010800                        . = ALIGN (0x4)
+                0x00010800                        __bss_end = .
+
+.heap           0x00010800      0x100 load address 0x00010000
+                0x00010800                        . = ALIGN (0x4)
+                0x00010800                        heap_low = .
+                0x00010900                        . = (. + heap_size)
+ *fill*         0x00010800      0x100 
+                0x00010900                        heap_top = .
+
+.stack          0x00010900      0x100 load address 0x00010100
+                0x00010900                        . = ALIGN (0x4)
+                0x00010900                        __stack_start = .
+                0x00010a00                        . = (. + stack_size)
+ *fill*         0x00010900      0x100 
+                0x00010a00                        __stack_end = .
+                0x00010a00                        _sp = .
+LOAD mult.o
+OUTPUT(firmware.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1a
+ .riscv.attributes
+                0x00000000       0x1a mult.o
