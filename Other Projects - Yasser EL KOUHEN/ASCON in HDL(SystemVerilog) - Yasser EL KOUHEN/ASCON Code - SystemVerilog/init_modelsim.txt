@@ -1,0 +1,4 @@
+#équivalent à dire que le terminal de l'ordinateur est un un terminal de modelsim
+
+source /etc/profile.d/modules.sh
+module load mentor/modelsim/2020.4

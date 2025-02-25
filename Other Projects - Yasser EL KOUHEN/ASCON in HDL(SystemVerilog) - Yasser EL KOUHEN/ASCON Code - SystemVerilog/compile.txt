@@ -1,0 +1,51 @@
+# Remove existing librairies
+vdel -lib LIB_RTL -all
+vdel -lib LIB_BENCH -all
+
+# Build librairies
+vlib LIB/LIB_RTL
+vmap LIB_RTL LIB/LIB_RTL
+vlib LIB/LIB_BENCH
+vmap LIB_BENCH LIB/LIB_BENCH
+
+# Define compilation options	
+VLOG_OPTS="-sv +acc -svinputport=net"
+
+# Compile all RTL sources
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/ascon_pack.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/constant_addition.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/ascon_sbox.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/substitution_layer.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/diffusion_lin.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/mux_state.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/state_register_w_en.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/xor_begin_perm.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/xor_end_perm.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/register_w_en.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/permutation_xor.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/compteur_double_init.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/compteur_simple_init.sv
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/FSM.sv
+
+vlog $VLOG_OPTS -work LIB_RTL ./SRC/RTL/ascon_top.sv
+
+# Compile all BENCH sources
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/constant_addition_tb.sv
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/ascon_sbox_tb.sv
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/substitution_layer_tb.sv
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/diffusion_lin_tb.sv
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/permutation_xor_tb.sv
+vlog $VLOG_OPTS -work LIB_BENCH -L LIB_RTL SRC/BENCH/ascon_top_tb.sv
+
+# Simulation
+# /!\ Uncomment only one vsim command below
+#vsim -L LIB_RTL LIB_BENCH.constant_addition_tb
+#vsim -L LIB_RTL LIB_BENCH.ascon_sbox_tb
+#vsim -L LIB_RTL LIB_BENCH.substitution_layer_tb
+#vsim -L LIB_RTL LIB_BENCH.diffusion_lin_tb
+#vsim -L LIB_RTL LIB_BENCH.permutation_xor_tb
+vsim -L LIB_RTL LIB_BENCH.ascon_top_tb
+
+
+
+

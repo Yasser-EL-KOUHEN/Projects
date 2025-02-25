@@ -1,0 +1,338 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yasser.elkouhen/ASCON
+T_opt
+!s110 1715764267
+VS`PRZ^09CC7<gd3gIAXQ42
+04 12 4 work ascon_top_tb fast 0
+=1-bc97e1a36448-66447c2b-3e751-4a4f
+o-quiet -auto_acc_if_foreign -work LIB_BENCH -L LIB_RTL
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vascon_sbox_tb
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 DXx7 LIB_RTL 10 ascon_pack 0 22 XbDIKMP4bg?Qz@H6V1@MU0
+DXx4 work 21 ascon_sbox_tb_sv_unit 0 22 M7:^FPNlUf>mb?``nPK]f2
+Z4 !s110 1715764258
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 `hbE9`OX5?lRVR]<XKN@C1
+INBg:ZZ8:ELQ7>Kd9c>YYf2
+!s105 ascon_sbox_tb_sv_unit
+S1
+R0
+Z6 w1715427076
+Z7 8SRC/BENCH/ascon_sbox_tb.sv
+Z8 FSRC/BENCH/ascon_sbox_tb.sv
+!i122 1
+L0 8 19
+Z9 OL;L;2020.4;71
+31
+Z10 !s108 1715764258.000000
+Z11 !s107 SRC/BENCH/ascon_sbox_tb.sv|
+Z12 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/ascon_sbox_tb.sv|
+!i113 0
+Z13 o-sv +acc -svinputport=net -work LIB_BENCH -L LIB_RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xascon_sbox_tb_sv_unit
+R2
+R3
+R4
+VM7:^FPNlUf>mb?``nPK]f2
+r1
+!s85 0
+!i10b 1
+!s100 eZ89BD<<Y[^AE2VR;oC[W0
+IM7:^FPNlUf>mb?``nPK]f2
+!i103 1
+S1
+R0
+R6
+R7
+R8
+!i122 1
+Z14 L0 5 0
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vascon_top_tb
+R2
+R3
+DXx4 work 20 ascon_top_tb_sv_unit 0 22 fJ9n8di1AKJFo3zm7bB3i1
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 ^eNBolb>Y31YY]5h3YLSa2
+I^fzTcd4Eb>d0X^9J_lHZX1
+!s105 ascon_top_tb_sv_unit
+S1
+R0
+Z15 w1715719298
+Z16 8SRC/BENCH/ascon_top_tb.sv
+Z17 FSRC/BENCH/ascon_top_tb.sv
+!i122 5
+L0 8 102
+R9
+31
+R10
+Z18 !s107 SRC/BENCH/ascon_top_tb.sv|
+Z19 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/ascon_top_tb.sv|
+!i113 0
+R13
+R1
+Xascon_top_tb_sv_unit
+R2
+R3
+R4
+VfJ9n8di1AKJFo3zm7bB3i1
+r1
+!s85 0
+!i10b 1
+!s100 n<N=5iOdTDlZ9^1Mga?ZR1
+IfJ9n8di1AKJFo3zm7bB3i1
+!i103 1
+S1
+R0
+R15
+R16
+R17
+!i122 5
+Z20 L0 6 0
+R9
+31
+R10
+R18
+R19
+!i113 0
+R13
+R1
+vconstant_addition_tb
+R2
+R3
+DXx4 work 28 constant_addition_tb_sv_unit 0 22 <1F=4E8A^V`M?BJbVliNb2
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 QRSNSKFzB@=GJFRDAIXUi1
+IbQV;nl^VA?@3mJf2GM@fY0
+!s105 constant_addition_tb_sv_unit
+S1
+R0
+Z21 w1715427078
+Z22 8SRC/BENCH/constant_addition_tb.sv
+Z23 FSRC/BENCH/constant_addition_tb.sv
+!i122 0
+L0 8 36
+R9
+31
+Z24 !s108 1715764257.000000
+Z25 !s107 SRC/BENCH/constant_addition_tb.sv|
+Z26 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/constant_addition_tb.sv|
+!i113 0
+R13
+R1
+Xconstant_addition_tb_sv_unit
+R2
+R3
+R4
+V<1F=4E8A^V`M?BJbVliNb2
+r1
+!s85 0
+!i10b 1
+!s100 X11M`7_j6KJ;eXAb?G01N2
+I<1F=4E8A^V`M?BJbVliNb2
+!i103 1
+S1
+R0
+R21
+R22
+R23
+!i122 0
+R14
+R9
+31
+R24
+R25
+R26
+!i113 0
+R13
+R1
+vdiffusion_lin_tb
+R2
+R3
+DXx4 work 24 diffusion_lin_tb_sv_unit 0 22 De1TQ5<d3lGa_n]Z5Ke;C3
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 N@5aC]neR@Ulb1R6d47X=3
+INW?0f96YC?C<=2Mf4HCbk0
+!s105 diffusion_lin_tb_sv_unit
+S1
+R0
+Z27 w1715427068
+Z28 8SRC/BENCH/diffusion_lin_tb.sv
+Z29 FSRC/BENCH/diffusion_lin_tb.sv
+!i122 3
+Z30 L0 8 31
+R9
+31
+R10
+Z31 !s107 SRC/BENCH/diffusion_lin_tb.sv|
+Z32 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/diffusion_lin_tb.sv|
+!i113 0
+R13
+R1
+Xdiffusion_lin_tb_sv_unit
+R2
+R3
+R4
+VDe1TQ5<d3lGa_n]Z5Ke;C3
+r1
+!s85 0
+!i10b 1
+!s100 jYT=c=>_EW8dA@_o`E0X?3
+IDe1TQ5<d3lGa_n]Z5Ke;C3
+!i103 1
+S1
+R0
+R27
+R28
+R29
+!i122 3
+R14
+R9
+31
+R10
+R31
+R32
+!i113 0
+R13
+R1
+vpermutation_xor_tb
+R2
+R3
+DXx4 work 26 permutation_xor_tb_sv_unit 0 22 6Ybg<@SeEUDXbSRYLezXK2
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 Zkc416PKigJ^dIUW7;c381
+I;7@KGOU46C`maT@R=E`KT3
+!s105 permutation_xor_tb_sv_unit
+S1
+R0
+Z33 w1715443378
+Z34 8SRC/BENCH/permutation_xor_tb.sv
+Z35 FSRC/BENCH/permutation_xor_tb.sv
+!i122 4
+L0 8 82
+R9
+31
+R10
+Z36 !s107 SRC/BENCH/permutation_xor_tb.sv|
+Z37 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/permutation_xor_tb.sv|
+!i113 0
+R13
+R1
+Xpermutation_xor_tb_sv_unit
+R2
+R3
+R4
+V6Ybg<@SeEUDXbSRYLezXK2
+r1
+!s85 0
+!i10b 1
+!s100 =AhXYUl`B2n221Ofn3[L=1
+I6Ybg<@SeEUDXbSRYLezXK2
+!i103 1
+S1
+R0
+R33
+R34
+R35
+!i122 4
+R20
+R9
+31
+R10
+R36
+R37
+!i113 0
+R13
+R1
+vsubstitution_layer_tb
+R2
+R3
+DXx4 work 29 substitution_layer_tb_sv_unit 0 22 6X^0eF1[<A0OnP9@i;`aC2
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 0P_:0UA060z3]fDgkKmo90
+IeFRlozzM755E06^57b1Fc3
+!s105 substitution_layer_tb_sv_unit
+S1
+R0
+Z38 w1715427016
+Z39 8SRC/BENCH/substitution_layer_tb.sv
+Z40 FSRC/BENCH/substitution_layer_tb.sv
+!i122 2
+R30
+R9
+31
+R10
+Z41 !s107 SRC/BENCH/substitution_layer_tb.sv|
+Z42 !s90 -sv|+acc|-svinputport=net|-work|LIB_BENCH|-L|LIB_RTL|SRC/BENCH/substitution_layer_tb.sv|
+!i113 0
+R13
+R1
+Xsubstitution_layer_tb_sv_unit
+R2
+R3
+R4
+V6X^0eF1[<A0OnP9@i;`aC2
+r1
+!s85 0
+!i10b 1
+!s100 U4ESH7V5MjHjfVd<ebTLN1
+I6X^0eF1[<A0OnP9@i;`aC2
+!i103 1
+S1
+R0
+R38
+R39
+R40
+!i122 2
+R14
+R9
+31
+R10
+R41
+R42
+!i113 0
+R13
+R1

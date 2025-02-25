@@ -1,0 +1,70 @@
+# //  ModelSim SE-64 2020.4 Oct 13 2020 Linux 3.10.0-1160.102.1.el7.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -L LIB_RTL LIB_BENCH.ascon_top_tb 
+# Start time: 11:11:07 on May 15,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading LIB_RTL.ascon_pack(fast)
+# Loading work.ascon_top_tb_sv_unit(fast)
+# Loading work.ascon_top_tb(fast)
+# Loading LIB_RTL.ascon_top_sv_unit(fast)
+# Loading LIB_RTL.ascon_top(fast)
+# Loading LIB_RTL.FSM(fast)
+# Loading LIB_RTL.compteur_double_init(fast)
+# Loading LIB_RTL.compteur_simple_init(fast)
+# Loading LIB_RTL.permutation_xor_sv_unit(fast)
+# Loading LIB_RTL.permutation_xor(fast)
+# Loading LIB_RTL.mux_state(fast)
+# Loading LIB_RTL.xor_begin_perm(fast)
+# Loading LIB_RTL.register_w_en(fast)
+# Loading LIB_RTL.constant_addition_sv_unit(fast)
+# Loading LIB_RTL.constant_addition(fast)
+# Loading LIB_RTL.substitution_layer_sv_unit(fast)
+# Loading LIB_RTL.substitution_layer(fast)
+# Loading LIB_RTL.ascon_sbox_sv_unit(fast)
+# Loading LIB_RTL.ascon_sbox(fast)
+# Loading LIB_RTL.diffusion_lin_sv_unit(fast)
+# Loading LIB_RTL.diffusion_lin(fast)
+# Loading LIB_RTL.xor_end_perm(fast)
+# Loading LIB_RTL.state_register_w_en(fast)
+# Loading LIB_RTL.register_w_en(fast__1)
+add wave -position insertpoint  \
+sim:/ascon_top_tb/DUT/clock_i \
+sim:/ascon_top_tb/DUT/resetb_i \
+sim:/ascon_top_tb/DUT/data_i \
+sim:/ascon_top_tb/DUT/data_valid_i \
+sim:/ascon_top_tb/DUT/key_i \
+sim:/ascon_top_tb/DUT/nonce_i \
+sim:/ascon_top_tb/DUT/start_i \
+sim:/ascon_top_tb/DUT/cipher_o \
+sim:/ascon_top_tb/DUT/cipher_valid_o \
+sim:/ascon_top_tb/DUT/tag_o \
+sim:/ascon_top_tb/DUT/end_o \
+sim:/ascon_top_tb/DUT/round_s \
+sim:/ascon_top_tb/DUT/blocs_s \
+sim:/ascon_top_tb/DUT/en_cpt_perm_s \
+sim:/ascon_top_tb/DUT/init_p6_s \
+sim:/ascon_top_tb/DUT/init_p12_s \
+sim:/ascon_top_tb/DUT/input_mode_s \
+sim:/ascon_top_tb/DUT/en_reg_state_s \
+sim:/ascon_top_tb/DUT/en_tag_s \
+sim:/ascon_top_tb/DUT/en_cipher_s \
+sim:/ascon_top_tb/DUT/state_input_s \
+sim:/ascon_top_tb/DUT/en_xor_key_b_s \
+sim:/ascon_top_tb/DUT/en_xor_data_b_s \
+sim:/ascon_top_tb/DUT/en_xor_key_e_s \
+sim:/ascon_top_tb/DUT/en_xor_lsb_e_s \
+sim:/ascon_top_tb/DUT/en_cpt_block_s \
+sim:/ascon_top_tb/DUT/init_block_s
